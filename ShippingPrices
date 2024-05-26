@@ -1,0 +1,70 @@
+def shipping(weight):
+  ground1 = weight * 1.5 + 20
+  ground2 = weight * 3 + 20
+  ground3 = weight * 4 + 20
+  ground4 = weight * 4.75 + 20
+  drone1 = weight * 4.5
+  drone2 = weight * 9
+  drone3 = weight * 12
+  drone4 = weight * 14.25
+  groundprem = 125
+
+  if weight <= 2:
+    print("Ground Shipping: $" + str(ground1))
+    print("Ground Premium Shipping: $" + str(groundprem))
+    print("Drone Shipping: $" + str(drone1))
+
+  elif weight > 2 and weight <= 6:
+    print("Ground Shipping: $" + str(ground2))
+    print("Ground Premium Shipping: $" + str(groundprem))
+    print("Drone Shipping: $" + str(drone2))
+
+  elif weight > 6 and weight <= 10:
+    print("Ground Shipping: $" + str(ground3))
+    print("Ground Premium Shipping: $" + str(groundprem))
+    print("Drone Shipping: $" + str(drone3))
+
+  elif weight > 10:
+    print("Ground Shipping: $" + str(ground4))
+    print("Ground Premium Shipping: $" + str(groundprem))
+    print("Drone Shipping: $" + str(drone4))
+
+  else:
+    return "Error: Please enter a valid weight"
+
+  if weight <= 2:
+    if ground1 > groundprem and drone1 > groundprem:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Premium Shipping at $" + str(groundprem))
+    elif ground1 < drone1:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Shipping at $" + str(ground1))
+    else:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Drone Shipping at $" + str(drone1))
+
+  elif weight > 2 and weight <= 6:
+    if ground2 > groundprem and drone2 > groundprem:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Premium Shipping at $" + str(groundprem))
+    elif ground2 < drone2:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Shipping at $" + str(ground2))
+    else:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Drone Shipping at $" + str(drone2))
+      
+  elif weight > 6 and weight <= 10:
+    if ground3 > groundprem and drone3 > groundprem:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Premium Shipping at $" + str(groundprem))
+    elif ground3 < drone3:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Shipping at $" + str(ground3))
+    else:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Drone Shipping at $" + str(drone3))
+
+  elif weight > 10:
+    if ground4 > groundprem and drone4 > groundprem:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Premium Shipping at $" + str(groundprem))
+    elif ground4 < drone4:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Ground Shipping at $" + str(ground4))
+    else:
+      Message = print("The cheapest shipping method for a package weighing " + str(weight) + "lbs is Drone Shipping at $" + str(drone4))
+    
+  else:
+    Message = print("Error: Please enter a valid weight")
+  
+shipping(3.34)
